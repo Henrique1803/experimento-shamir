@@ -1,0 +1,9 @@
+=== A6.1 Exemplo do relatório: participantes 1, 2 e 3, p = 17, participante 1 trapaceia ===
+partes verdadeiras: [(1, 8), (2, 6), (3, 7)]; o participante 1 apresenta 9 no lugar de 8
+lambda_1 = 3
+valor anunciado aos honestos: D' = 16
+valor calculado pelo trapaceiro: D' - delta * lambda_1 = 13  (segredo real: 13)
+
+=== A6.2 10000 ataques com p = 2^127 - 1 e parâmetros sorteados ===
+participantes honestos com valor errado: 10000 de 10000
+trapaceiro recuperou o segredo verdadeiro: 10000 de 10000

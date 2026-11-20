@@ -1,0 +1,31 @@
+=== A2.1 Exemplo da Seção 2.5: q(x) = 13 + 2x + 10x^2 mod 17 ===
+partes geradas: [(1, 8), (2, 6), (3, 7), (4, 11), (5, 1)]
+iguais à Tabela 1: True
+  participantes [1, 2, 3] -> D = 13
+  participantes [1, 2, 4] -> D = 13
+  participantes [1, 2, 5] -> D = 13
+  participantes [1, 3, 4] -> D = 13
+  participantes [1, 3, 5] -> D = 13
+  participantes [1, 4, 5] -> D = 13
+  participantes [2, 3, 4] -> D = 13
+  participantes [2, 3, 5] -> D = 13
+  participantes [2, 4, 5] -> D = 13
+  participantes [3, 4, 5] -> D = 13
+trios que reconstroem D = 13: 10 de 10
+
+=== A2.2 Todos os subconjuntos de k partes, n <= 10, p = 2^127 - 1 ===
+20 segredos por par (n, k), 40720 reconstruções, 0 falhas
+
+=== A2.3 Parâmetros sorteados, p = 2^127 - 1 ===
+2000 testes com 1 <= k <= n <= 60 e entre k e n partes sorteadas: 0 falhas
+
+=== A2.4 Interpolação com apenas k - 1 partes ===
+Esperado: coincidência com D só quando a_{k-1} = 0, com probabilidade 1/p.
+p = 17       k = 2:  11644 coincidências em 200000 (5.82%, esperado 5.9%); casos em que coincidência != (a_(k-1) = 0): 0
+p = 17       k = 3:  11726 coincidências em 200000 (5.86%, esperado 5.9%); casos em que coincidência != (a_(k-1) = 0): 0
+p = 17       k = 4:  11696 coincidências em 200000 (5.85%, esperado 5.9%); casos em que coincidência != (a_(k-1) = 0): 0
+p = 17       k = 5:  11783 coincidências em 200000 (5.89%, esperado 5.9%); casos em que coincidência != (a_(k-1) = 0): 0
+p = 2^127-1  k = 2:      0 coincidências em 200000 (0.00%, esperado 5.9e-37%); casos em que coincidência != (a_(k-1) = 0): 0
+p = 2^127-1  k = 3:      0 coincidências em 200000 (0.00%, esperado 5.9e-37%); casos em que coincidência != (a_(k-1) = 0): 0
+p = 2^127-1  k = 4:      0 coincidências em 200000 (0.00%, esperado 5.9e-37%); casos em que coincidência != (a_(k-1) = 0): 0
+p = 2^127-1  k = 5:      0 coincidências em 200000 (0.00%, esperado 5.9e-37%); casos em que coincidência != (a_(k-1) = 0): 0

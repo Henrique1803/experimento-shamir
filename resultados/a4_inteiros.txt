@@ -1,0 +1,24 @@
+=== A4.1 Vazamentos diretos sem redução modular (k = 3, n = 5, M = 2^16) ===
+segredo D = 62976, partes = [(1, 161348), (2, 370024), (3, 689004), (4, 1118288), (5, 1657876)]
+  participante 1: D_1 mod 1 = 0  (D mod 1 = 0)
+  participante 2: D_2 mod 2 = 0  (D mod 2 = 0)
+  participante 3: D_3 mod 3 = 0  (D mod 3 = 0)
+  participante 4: D_4 mod 4 = 0  (D mod 4 = 0)
+  participante 5: D_5 mod 5 = 1  (D mod 5 = 1)
+participantes 2 e 3 juntos (k - 1 partes): D mod 6 = 0  (real: 0)
+limitante superior dado pela parte 1: D <= 161348  (real: 62976)
+
+=== A4.2 Candidatos D' compatíveis com 2 partes, segredos de 16 bits, 30 ensaios por configuração ===
+total de candidatos: 65536
+inteiros, partes (1, 2), M = 2^ 8: média      71.1 candidatos (mín 9, máx 86), restam  6.15 de 16 bits de incerteza
+inteiros, partes (1, 2), M = 2^16: média   16542.8 candidatos (mín 2334, máx 21846), restam 14.01 de 16 bits de incerteza
+inteiros, partes (1, 2), M = 2^32: média   32768.0 candidatos (mín 32768, máx 32768), restam 15.00 de 16 bits de incerteza
+Z_65537,  partes (1, 2):            65536 a 65536 candidatos em todos os ensaios (nenhuma informação)
+inteiros, partes (2, 3), M = 2^ 8: média      45.2 candidatos (mín 12, máx 52), restam  5.50 de 16 bits de incerteza
+inteiros, partes (2, 3), M = 2^16: média    7925.0 candidatos (mín 799, máx 10923), restam 12.95 de 16 bits de incerteza
+inteiros, partes (2, 3), M = 2^32: média   10922.7 candidatos (mín 10922, máx 10923), restam 13.42 de 16 bits de incerteza
+Z_65537,  partes (2, 3):            65536 a 65536 candidatos em todos os ensaios (nenhuma informação)
+inteiros, partes (4, 5), M = 2^ 8: média      27.7 candidatos (mín 12, máx 29), restam  4.79 de 16 bits de incerteza
+inteiros, partes (4, 5), M = 2^16: média    2715.4 candidatos (mín 699, máx 3277), restam 11.41 de 16 bits de incerteza
+inteiros, partes (4, 5), M = 2^32: média    3276.7 candidatos (mín 3276, máx 3277), restam 11.68 de 16 bits de incerteza
+Z_65537,  partes (4, 5):            65536 a 65536 candidatos em todos os ensaios (nenhuma informação)
