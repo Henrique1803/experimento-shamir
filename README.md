@@ -44,8 +44,8 @@ Resultados de uma execução completa. Os números variam um pouco entre execuç
 | Experimento | Resultado |
 |---|---|
 | A1 | 14 testes unitários aprovados |
-| A2 | A Tabela 1 foi reproduzida e os 10 trios reconstroem D = 13. Houve 40720 reconstruções com todos os subconjuntos (n ≤ 10) e 2000 com parâmetros sorteados, todas sem falha. Com k − 1 partes, as coincidências ficaram entre 5,82% e 5,89% para p = 17 (esperado 1/17 ≈ 5,88%) e foram 0 para p = 2¹²⁷ − 1, sempre exatamente quando a₍ₖ₋₁₎ = 0 |
+| A2 | A Tabela 1 foi reproduzida e os 10 trios reconstroem D = 13. Houve 40720 reconstruções com todos os subconjuntos (n ≤ 10) e 2000 com parâmetros sorteados, todas sem falha. Com k − 1 partes, as coincidências ficaram entre 5,79% e 6,01% para p = 17 (esperado 1/17 ≈ 5,88%) e foram 0 para p = 2¹²⁷ − 1, sempre exatamente quando a₍ₖ₋₁₎ = 0 |
 | A3 | Cada um dos 17 candidatos tem exatamente um polinômio compatível. Os 289 pares (D₁, D₂) são compatíveis com a distribuição uniforme para D = 0 e para D = 13, e as duas distribuições são indistinguíveis (teste qui-quadrado a 5%) |
-| A4 | Sem redução modular, 2 partes reduzem os 65536 candidatos para 28 a 71 em média com M = 2⁸. Mesmo com M = 2³², restam 32768, 10923 ou 3277, que correspondem a D mod 2, D mod 6 e D mod 20. Em Z₆₅₅₃₇, os 65536 candidatos continuam possíveis |
-| A5 | Com k = n até 1000, o expoente estimado é 1,97 para a divisão e 1,90 para a reconstrução, o que confirma o crescimento quadrático. Com k fixo, a divisão cresce linearmente em n e a reconstrução fica constante |
+| A4 | Sem redução modular, 2 partes reduzem os 65536 candidatos para 24 a 79 em média com M = 2⁸. Mesmo com M = 2³², restam 32768, 10923 ou 3277, que correspondem a D mod 2, D mod 6 e D mod 20. Em Z₆₅₅₃₇, os 65536 candidatos continuam possíveis |
+| A5 | Com k = n até 1000, o expoente estimado é 1,99 para a divisão e 1,91 para a reconstrução, o que confirma o crescimento quadrático. Com k fixo, a divisão cresce linearmente em n e a reconstrução fica constante |
 | A6 | Em 10000 ataques com p = 2¹²⁷ − 1, os participantes honestos obtiveram o valor errado em todos e o trapaceiro recuperou o segredo em todos |
