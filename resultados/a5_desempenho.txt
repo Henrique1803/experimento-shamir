@@ -1,38 +1,38 @@
-Python 3.12.3, mediana de 9 repetições, tempos em ms
+Python 3.14.6, mediana de 9 repetições, tempos em ms
 
 === A5.1 k = n, p = 2^127 - 1 ===
  k = n |  divisão (ms) | reconstrução (ms)
-     2 |         0.002 |             0.002
-     5 |         0.005 |             0.006
-    10 |         0.014 |             0.018
-    25 |         0.060 |             0.130
-    50 |         0.213 |             0.563
-   100 |         0.847 |             1.874
-   250 |         4.947 |            10.121
-   500 |        19.521 |            40.085
-   750 |        44.456 |            90.929
-  1000 |        79.396 |           161.096
-expoente estimado (k >= 50): divisão 1.97, reconstrução 1.90 (esperado próximo de 2)
+     2 |         0.002 |             0.003
+     5 |         0.006 |             0.008
+    10 |         0.016 |             0.024
+    25 |         0.083 |             0.179
+    50 |         0.239 |             0.601
+   100 |         0.913 |             2.059
+   250 |         5.818 |            11.641
+   500 |        23.074 |            45.734
+   750 |        51.316 |           103.892
+  1000 |        93.807 |           181.417
+expoente estimado (k >= 50): divisão 1.99, reconstrução 1.91 (esperado próximo de 2)
 
 === A5.2 k = 10 fixo, n variando, p = 2^127 - 1 ===
      n |  divisão (ms) | reconstrução (ms)
-    10 |         0.015 |             0.018
-    25 |         0.027 |             0.018
-    50 |         0.047 |             0.018
-   100 |         0.092 |             0.018
-   250 |         0.214 |             0.018
-   500 |         0.444 |             0.018
-   750 |         0.679 |             0.018
-  1000 |         0.908 |             0.018
+    10 |         0.016 |             0.025
+    25 |         0.034 |             0.026
+    50 |         0.064 |             0.024
+   100 |         0.102 |             0.019
+   250 |         0.255 |             0.019
+   500 |         0.613 |             0.020
+   750 |         0.752 |             0.021
+  1000 |         1.002 |             0.021
 expoente estimado da divisão em função de n: 0.91 (esperado próximo de 1); a reconstrução depende apenas de k e fica praticamente constante
 
 === A5.3 Tamanho do segredo, k = 10, n = 20 ===
                   configuração | bytes |  divisão (ms) | reconstrução (ms)
-               primo 2^127 - 1 |    15 |         0.023 |             0.017
-             primo 2^256 - 189 |    31 |         0.025 |             0.021
-               primo 2^521 - 1 |    65 |         0.034 |             0.026
- blocos de 15 bytes (2 blocos) |    16 |         0.050 |             0.037
- blocos de 15 bytes (5 blocos) |    64 |         0.120 |             0.089
-blocos de 15 bytes (18 blocos) |   256 |         0.419 |             0.322
-blocos de 15 bytes (69 blocos) |  1024 |         1.645 |             1.241
-blocos de 15 bytes (274 blocos) |  4096 |         6.654 |             4.934
+               primo 2^127 - 1 |    15 |         0.028 |             0.025
+             primo 2^256 - 189 |    31 |         0.034 |             0.028
+               primo 2^521 - 1 |    65 |         0.038 |             0.035
+ blocos de 15 bytes (2 blocos) |    16 |         0.061 |             0.053
+ blocos de 15 bytes (5 blocos) |    64 |         0.119 |             0.122
+blocos de 15 bytes (18 blocos) |   256 |         0.427 |             0.348
+blocos de 15 bytes (69 blocos) |  1024 |         1.624 |             1.344
+blocos de 15 bytes (274 blocos) |  4096 |         6.621 |             5.404

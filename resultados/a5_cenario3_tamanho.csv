@@ -1,9 +1,9 @@
 configuracao,bytes,divisao_ms,reconstrucao_ms
-primo 2^127 - 1,15,0.022716,0.017424
-primo 2^256 - 189,31,0.02495,0.020517
-primo 2^521 - 1,65,0.033645,0.026406
-blocos de 15 bytes (2 blocos),16,0.049766,0.037293
-blocos de 15 bytes (5 blocos),64,0.12004,0.088568
-blocos de 15 bytes (18 blocos),256,0.419253,0.321505
-blocos de 15 bytes (69 blocos),1024,1.644946,1.240501
-blocos de 15 bytes (274 blocos),4096,6.654059,4.93441
+primo 2^127 - 1,15,0.0282,0.0254
+primo 2^256 - 189,31,0.0335,0.0278
+primo 2^521 - 1,65,0.038,0.0345
+blocos de 15 bytes (2 blocos),16,0.0609,0.053
+blocos de 15 bytes (5 blocos),64,0.1191,0.1223
+blocos de 15 bytes (18 blocos),256,0.4274,0.3476
+blocos de 15 bytes (69 blocos),1024,1.624,1.3441
+blocos de 15 bytes (274 blocos),4096,6.6208,5.4039

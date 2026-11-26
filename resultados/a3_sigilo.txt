@@ -22,6 +22,6 @@ todos os candidatos com exatamente um polinômio: True
 
 === A3.2 Distribuição de (D_1, D_2) em 300000 divisões, k = 3, p = 17 ===
 frequência esperada por par: 1038.1
-D =  0: pares observados 289 de 289, mínimo 933, máximo 1145, qui-quadrado 268.9 (valor crítico a 5% com 288 g.l.: 328.6) -> compatível com distribuição uniforme
-D = 13: pares observados 289 de 289, mínimo 943, máximo 1121, qui-quadrado 313.4 (valor crítico a 5% com 288 g.l.: 328.6) -> compatível com distribuição uniforme
-homogeneidade entre D = 0 e D = 13: qui-quadrado 299.0 (crítico 328.6) -> distribuições indistinguíveis
+D =  0: pares observados 289 de 289, mínimo 960, máximo 1128, qui-quadrado 273.3 (valor crítico a 5% com 288 g.l.: 328.6) -> compatível com distribuição uniforme
+D = 13: pares observados 289 de 289, mínimo 953, máximo 1141, qui-quadrado 269.4 (valor crítico a 5% com 288 g.l.: 328.6) -> compatível com distribuição uniforme
+homogeneidade entre D = 0 e D = 13: qui-quadrado 257.5 (crítico 328.6) -> distribuições indistinguíveis
