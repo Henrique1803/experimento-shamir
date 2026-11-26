@@ -53,9 +53,10 @@ def qui_quadrado_critico(graus, alfa=0.05):
 
 
 def inclinacao_loglog(xs, ys):
-    """Inclinação da reta de mínimos quadrados em escala log-log (expoente do crescimento)."""
-    lx = [math.log(x) for x in xs]
-    ly = [math.log(y) for y in ys]
-    mx, my = sum(lx) / len(lx), sum(ly) / len(ly)
-    return (sum((a - mx) * (b - my) for a, b in zip(lx, ly))
-            / sum((a - mx) ** 2 for a in lx))
+    """Expoente do crescimento (mínimos quadrados em log-log)."""
+    lx, ly = list(map(math.log, xs)), list(map(math.log, ys))
+    mx = sum(lx) / len(lx)
+    my = sum(ly) / len(ly)
+    cov = sum((a - mx) * (b - my) for a, b in zip(lx, ly))
+    var = sum((a - mx) ** 2 for a in lx)
+    return cov / var

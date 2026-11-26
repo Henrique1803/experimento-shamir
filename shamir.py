@@ -1,23 +1,13 @@
-"""Experimento A1: biblioteca do esquema de compartilhamento de segredos de Shamir.
-
-Implementa os Algoritmos 1 (divisão) e 2 (reconstrução) do relatório parcial,
-as validações da Seção 3.1 e funções auxiliares para segredos em bytes.
-Não usa nenhuma biblioteca pronta de compartilhamento de segredos.
-"""
+"""A1: esquema de Shamir (divisão, reconstrução e segredos em bytes)."""
 
 import secrets
 
-# Primos usados no trabalho (Seção 3.1 do relatório).
-P127 = 2**127 - 1    # primo de Mersenne, corpo padrão
+P127 = 2**127 - 1  # padrão
 P256 = 2**256 - 189
-P521 = 2**521 - 1    # primo de Mersenne
+P521 = 2**521 - 1
 
 PRIMO_PADRAO = P127
 
-
-# ---------------------------------------------------------------------------
-# Polinômio e divisão (Algoritmo 1)
-# ---------------------------------------------------------------------------
 
 def avaliar(coeficientes, x, p):
     """Avalia q(x) = a_0 + a_1 x + ... + a_{k-1} x^{k-1} mod p pelo método de Horner."""
@@ -51,17 +41,13 @@ def dividir(segredo, k, n, p=PRIMO_PADRAO):
     return partes_do_polinomio(coeficientes, n, p)
 
 
-# ---------------------------------------------------------------------------
-# Reconstrução (Algoritmo 2)
-# ---------------------------------------------------------------------------
-
 def validar_partes(partes, p):
     if not partes:
         raise ValueError("nenhuma parte informada")
-    indices = [x for x, _ in partes]
-    if any(x % p == 0 for x in indices):
+    xs = {x % p for x, _ in partes}
+    if 0 in xs:
         raise ValueError("parte com índice zero rejeitada")
-    if len({x % p for x in indices}) != len(indices):
+    if len(xs) < len(partes):
         raise ValueError("partes com índices repetidos rejeitadas")
 
 
@@ -86,10 +72,6 @@ def reconstruir(partes, p=PRIMO_PADRAO):
     return segredo
 
 
-# ---------------------------------------------------------------------------
-# Segredos em bytes e divisão em blocos
-# ---------------------------------------------------------------------------
-
 def bytes_por_bloco(p):
     """Maior número de bytes cujo valor inteiro é sempre menor que p (15 para 2^127 - 1)."""
     return (p.bit_length() - 1) // 8
@@ -102,21 +84,14 @@ def bytes_para_blocos(dados, p):
 
 
 def blocos_para_bytes(blocos, comprimento, p):
-    """Operação inversa de bytes_para_blocos, preservando zeros à esquerda."""
     tamanho = bytes_por_bloco(p)
-    saida = bytearray()
-    for indice, valor in enumerate(blocos):
-        restante = comprimento - indice * tamanho
-        saida += valor.to_bytes(min(tamanho, restante), "big")
-    return bytes(saida)
+    # o último bloco pode ser mais curto
+    return b"".join(v.to_bytes(min(tamanho, comprimento - i * tamanho), "big")
+                    for i, v in enumerate(blocos))
 
 
 def dividir_bytes(dados, k, n, p=PRIMO_PADRAO):
-    """Divide um segredo em bytes de qualquer tamanho, bloco a bloco.
-
-    Cada bloco recebe um polinômio independente. A parte do participante i é
-    (i, [valores dos blocos], comprimento). O comprimento do segredo não é sigiloso.
-    """
+    """Um polinômio por bloco. Parte i: (i, [valores], comprimento)."""
     validar_parametros(k, n, p)
     blocos = bytes_para_blocos(dados, p)
     por_bloco = [dividir(b, k, n, p) for b in blocos]
